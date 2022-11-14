@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DynamicDebug|Win32">
+      <Configuration>DynamicDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DynamicRelease|Win32">
+      <Configuration>DynamicRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D4BD1A7A-B824-4493-BF12-0CCA59196445}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EcoC1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DynamicDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DynamicRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DynamicDebug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DynamicRelease|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DynamicDebug|Win32'">
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>ecoc</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DynamicRelease|Win32'">
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>ecoc</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DynamicDebug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\SharedFiles;..\..\..\HeaderFiles;..\..\..\..\..\Eco.Framework\Eco.Core1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.InterfaceBus1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.System1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.MemoryManager1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Log1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Tree1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Stack1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Dictionary1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Data1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.String1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.FSM1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.MZEXE1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.COFF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.PECOFF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.OMF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.List1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.PushdownAutomata1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.LexicalAnalyzer1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.RL1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.BNF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.LR1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.MacroProcessor1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.SyntaxAnalyzer1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.Optimizer1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.CodeGenerator1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.Linker1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.EmitterI80686\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.EmitterI8086\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.AST1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.FileSystemManagement1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Comparator1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Set1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Map1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.SLR1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.LALR1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Visitor1\SharedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <PreprocessorDefinitions>ECO_WINDOWS;WIN32;_DEBUG;_CONSOLE;ECO_DLL%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\..\..\Eco.Framework\Eco.System1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;..\..\..\..\..\Eco.Framework\Eco.InterfaceBus1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;..\..\..\..\..\Eco.Framework\Eco.MemoryManager1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;..\..\..\..\..\Eco.Framework\Eco.FileSystemManagement1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>00000000000000000000000000000100.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.String1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\84CC0A7DBABD44EEBE749C9A8312D37E.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.List1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\53884AFC93C448ECAA929C8D3A562281.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Tree1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\82F73722057E47F3A2931ED27087694D.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Visitor1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\4E7C20FEFAF341069B5C42497B462BBE.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.OMF1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\4FD62C8E955D4E5FADBC3FCB1EFB6288.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.MZEXE1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\21AC03CF947543DAA5EAFD840E6C24AE.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.COFF1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\1CDF093D22EF4917BC291E4889866214.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.PECOFF1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\46511227059E4D488D6FA8123FA0A383.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Dictionary1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\2912A7C7E0B84B4D9BFE9500EF4667D3.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Stack1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\18129B1DCF9248D9A7787F9206E2D6DC.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Data1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\5A0F0DD57E6448EC9EE0E5D67572B47E.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.FSM1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\5E7C610CB846447DB59A3C5A2C4F446F.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.AST1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\2FE0BD508F5743BDA9F52414233542A8.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.CodeGenerator1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\2BF1E51154E441A9ADC82D0930FC5CD0.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.EmitterI8086\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\40EF2C877A694A3EB616F90CB32610BA.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.EmitterI80686\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\67198C8746EB4AECB589ED4E68000FD9.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.Linker1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\1E7247F803CE4A30B3A0C00E9F6D5C17.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.LALR1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\E78845B36D51460D955343A576C111EE.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.LR1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\69173E0D97DF4B23AAE05D9CDA852EE2.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.SLR1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\5CF3BF55E8FA404C9AECF53FBEB85B58.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.MacroProcessor1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\A06E8BB991334E0C84CDAE59AE984DB9.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.LexicalAnalyzer1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\7D1E60DAB7EA4837A79D537781F94437.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.SyntaxAnalyzer1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\01097B434B08447BBC0B6F5698E4C2CB.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.Optimizer1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\3C68DEEC51FE458CAB2DC400826AF9FA.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.PushdownAutomata1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\17CD14CC87A84467B72907C7C4CE6CAD.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Toolchain.BNF1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\323DD55E33D040FA98068E2FCB1CBD49.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Log1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\97322B6765B74342BBCE38798A0B40B5.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.DateTime1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\5B2BA17BEA704527BC708F88568FE115.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Comparator1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\C7ED3BA4B6EB4385BBDB3C6AC5C7A394.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Set1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\7750135D34D7461897B912F7CC615F72.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Map1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\0D7907DBE1C14B9E9B9FD9E8D9E251DF.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Queue1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\25D72F83A2564F4E9F59E489BE85E2A4.dll" "$(TargetDir)"
+xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.Visitor1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\4E7C20FEFAF341069B5C42497B462BBE.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DynamicRelease|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>..\..\..\SharedFiles;..\..\..\HeaderFiles;..\..\..\..\..\Eco.Framework\Eco.Core1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.InterfaceBus1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.System1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.MemoryManager1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Log1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Tree1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Stack1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Dictionary1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Data1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.String1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.FSM1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.MZEXE1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.COFF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.PECOFF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.OMF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.List1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.PushdownAutomata1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.LexicalAnalyzer1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.RL1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.BNF1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.LR1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.MacroProcessor1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.SyntaxAnalyzer1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.Optimizer1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.CodeGenerator1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.Linker1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.EmitterI8086\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.AST1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.FileSystemManagement1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Comparator1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Set1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Map1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.SLR1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Toolchain.LALR1\SharedFiles;..\..\..\..\..\Eco.Framework\Eco.Visitor1\SharedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ECO_WINDOWS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\..\..\Eco.Framework\Eco.System1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;..\..\..\..\..\Eco.Framework\Eco.InterfaceBus1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;..\..\..\..\..\Eco.Framework\Eco.MemoryManager1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;..\..\..\..\..\Eco.Framework\Eco.FileSystemManagement1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\StaticDebug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>00000000000000000000000000000100.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\$(Configuration)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "..\..\..\..\..\Eco.Framework\Eco.String1\BuildFiles\$(TargetPlatformIdentifier)\$(ProcessorArchitecture)\DynamicDebug\84CC0A7DBABD44EEBE749C9A8312D37E.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\SourceFiles\EcoAsm8086Grammar.c" />
+    <ClCompile Include="..\..\..\SourceFiles\EcoC1.c" />
+    <ClCompile Include="..\..\..\SourceFiles\EcoC89Grammar.c" />
+    <ClCompile Include="..\..\..\SourceFiles\EcoOutputDiagnostic.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\HeaderFiles\EcoAsm8086Grammar.h" />
+    <ClInclude Include="..\..\..\HeaderFiles\EcoC89Grammar.h" />
+    <ClInclude Include="..\..\..\HeaderFiles\EcoOutputDiagnostic.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
