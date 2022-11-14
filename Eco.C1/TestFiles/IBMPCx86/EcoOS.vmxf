@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<VMId type="string">52 f9 3d 3a bd 02 2c a9-a6 3d 07 e0 c5 4d 61 30</VMId>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">EcoOS.vmx</vmxPathName></VM></Foundry>
